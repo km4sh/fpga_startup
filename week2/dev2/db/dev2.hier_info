@@ -1,0 +1,5 @@
+|dev2
+ori => dev~reg0.CLK
+dev <= dev~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

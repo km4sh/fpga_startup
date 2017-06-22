@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, /home/kmash/altera/13.0sp1/helloworld/week2/neged/neged.v
+source_file = 1, /home/kmash/altera/13.0sp1/helloworld/week2/neged/db/neged.cbx.xml
+design_name = neged
+instance = comp, \clk~I\, clk, neged, 1
+instance = comp, \clk~clkctrl\, clk~clkctrl, neged, 1
+instance = comp, \key_in~I\, key_in, neged, 1
+instance = comp, \pre_key~feeder\, pre_key~feeder, neged, 1
+instance = comp, \Equal0~0\, Equal0~0, neged, 1
+instance = comp, \key_en~reg0\, key_en~reg0, neged, 1
+instance = comp, \key_en~I\, key_en, neged, 1

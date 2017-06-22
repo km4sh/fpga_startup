@@ -1,0 +1,24 @@
+|week1
+divided <= q12.DB_MAX_OUTPUT_PORT_TYPE
+original => q12.CLK
+reg1 <= q31.DB_MAX_OUTPUT_PORT_TYPE
+clk => q31.CLK
+clk => q32.CLK
+clk => q33.CLK
+clk => q34.CLK
+clk => q41.CLK
+data => q31.DATAIN
+reg2 <= q32.DB_MAX_OUTPUT_PORT_TYPE
+reg3 <= q33.DB_MAX_OUTPUT_PORT_TYPE
+reg4 <= q34.DB_MAX_OUTPUT_PORT_TYPE
+choosed <= q23.DB_MAX_OUTPUT_PORT_TYPE
+choose => q22.IN0
+choose => q24.IN0
+sig2 => q22.IN1
+sig1 => q21.IN0
+neg_edge <= q43.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => q41.ACLR
+signal => q41.DATAIN
+signal => q42.IN0
+
+

@@ -1,0 +1,41 @@
+|Block1
+A[0] <= testpara:inst.dout[0]
+A[1] <= testpara:inst.dout[1]
+A[2] <= testpara:inst.dout[2]
+A[3] <= testpara:inst.dout[3]
+A[4] <= testpara:inst.dout[4]
+A[5] <= testpara:inst.dout[5]
+A[6] <= testpara:inst.dout[6]
+A[7] <= testpara:inst.dout[7]
+B[0] <= testpara:inst1.dout[0]
+B[1] <= testpara:inst1.dout[1]
+B[2] <= testpara:inst1.dout[2]
+B[3] <= testpara:inst1.dout[3]
+B[4] <= testpara:inst1.dout[4]
+B[5] <= testpara:inst1.dout[5]
+B[6] <= testpara:inst1.dout[6]
+B[7] <= testpara:inst1.dout[7]
+
+
+|Block1|testpara:inst
+dout[0] <= <GND>
+dout[1] <= <VCC>
+dout[2] <= <GND>
+dout[3] <= <VCC>
+dout[4] <= <GND>
+dout[5] <= <GND>
+dout[6] <= <GND>
+dout[7] <= <GND>
+
+
+|Block1|testpara:inst1
+dout[0] <= <GND>
+dout[1] <= <GND>
+dout[2] <= <GND>
+dout[3] <= <GND>
+dout[4] <= <VCC>
+dout[5] <= <VCC>
+dout[6] <= <VCC>
+dout[7] <= <VCC>
+
+

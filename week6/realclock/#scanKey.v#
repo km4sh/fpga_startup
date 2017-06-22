@@ -1,0 +1,43 @@
+module scanKey(
+input clk,
+input en_5ms,
+input [2:0]col,
+output reg [3:0]row,
+output reg [11:0]key
+);
+initial key <= 12'b0;
+
+initial row <= 4'b1110;
+always @(posedge clk)
+begin
+        if(en_5ms)begin
+                row <= {row[2:0],row[3]};
+        end
+end
+
+integer i;
+always @(posedge clk)
+begin
+        for(i=0; i<4; i=i+1)begin
+                if({col[2],row[i]} == 2'b00)begin
+                        key[i] <= 1'b1;
+                end else if ({col[2],row[i]} == 2'b10)begin
+                        key[i] <= 1'b0;
+                end
+        end
+        for(i=0; i<4; i=i+1)begin
+                if({col[1],row[i]} == 2'b00)begin
+                        key[i+4] <= 1'b1;
+                end else if ({col[1],row[i]} == 2'b10)begin
+                        key[i+4] <= 1'b0;
+                end
+        end
+        for(i=0; i<4; i=i+1)begin
+                if({col[0],row[i]} == 2'b00)begin
+                        key[i+8] <= 1'b1;
+                end else if ({col[0],row[i]} == 2'b10)begin
+                        key[i+8] <= 1'b0;
+                end
+        end
+end
+endmodule

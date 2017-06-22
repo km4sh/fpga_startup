@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'basicclock:inst2|ptflag'
+Slack : -7.518
+TNS   : -134.088
+
+Type  : Slow Model Setup 'clk'
+Slack : -4.960
+TNS   : -303.281
+
+Type  : Slow Model Setup 'digitleds:inst3|led_clk'
+Slack : -3.343
+TNS   : -50.904
+
+Type  : Slow Model Setup 'spset:inst1|sp'
+Slack : 0.235
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk'
+Slack : -4.117
+TNS   : -9.332
+
+Type  : Slow Model Hold 'basicclock:inst2|ptflag'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'digitleds:inst3|led_clk'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'spset:inst1|sp'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.941
+TNS   : -147.373
+
+Type  : Slow Model Minimum Pulse Width 'basicclock:inst2|ptflag'
+Slack : -0.742
+TNS   : -48.972
+
+Type  : Slow Model Minimum Pulse Width 'digitleds:inst3|led_clk'
+Slack : -0.742
+TNS   : -37.100
+
+Type  : Slow Model Minimum Pulse Width 'spset:inst1|sp'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Fast Model Setup 'basicclock:inst2|ptflag'
+Slack : -1.583
+TNS   : -22.698
+
+Type  : Fast Model Setup 'clk'
+Slack : -0.998
+TNS   : -42.595
+
+Type  : Fast Model Setup 'digitleds:inst3|led_clk'
+Slack : -0.698
+TNS   : -3.598
+
+Type  : Fast Model Setup 'spset:inst1|sp'
+Slack : 0.665
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.903
+TNS   : -4.670
+
+Type  : Fast Model Hold 'basicclock:inst2|ptflag'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'digitleds:inst3|led_clk'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'spset:inst1|sp'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -99.380
+
+Type  : Fast Model Minimum Pulse Width 'basicclock:inst2|ptflag'
+Slack : -0.500
+TNS   : -33.000
+
+Type  : Fast Model Minimum Pulse Width 'digitleds:inst3|led_clk'
+Slack : -0.500
+TNS   : -25.000
+
+Type  : Fast Model Minimum Pulse Width 'spset:inst1|sp'
+Slack : -0.500
+TNS   : -1.000
+
+------------------------------------------------------------

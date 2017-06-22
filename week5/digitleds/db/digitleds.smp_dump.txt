@@ -1,0 +1,13 @@
+
+State Machine - |digitleds|digit
+Name digit.1001 digit.1000 digit.0111 digit.0110 digit.0101 digit.0100 digit.0011 digit.0010 digit.0001 digit.0000 
+digit.0000 0 0 0 0 0 0 0 0 0 0 
+digit.0001 0 0 0 0 0 0 0 0 1 1 
+digit.0010 0 0 0 0 0 0 0 1 0 1 
+digit.0011 0 0 0 0 0 0 1 0 0 1 
+digit.0100 0 0 0 0 0 1 0 0 0 1 
+digit.0101 0 0 0 0 1 0 0 0 0 1 
+digit.0110 0 0 0 1 0 0 0 0 0 1 
+digit.0111 0 0 1 0 0 0 0 0 0 1 
+digit.1000 0 1 0 0 0 0 0 0 0 1 
+digit.1001 1 0 0 0 0 0 0 0 0 1 

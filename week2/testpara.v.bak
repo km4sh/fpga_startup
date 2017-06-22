@@ -1,0 +1,7 @@
+module testpara(
+   output [7:0]dout
+);
+   parameter [7:0] VAL = 8'd10;
+   assign dout = VAL;
+
+endmodule

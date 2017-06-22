@@ -1,0 +1,269 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "03/30/2017 19:33:47"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    week1
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module week1_vlg_sample_tst(
+	choose,
+	clk,
+	data,
+	original,
+	rst_n,
+	sig1,
+	sig2,
+	signal,
+	sampler_tx
+);
+input  choose;
+input  clk;
+input  data;
+input  original;
+input  rst_n;
+input  sig1;
+input  sig2;
+input  signal;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(choose or clk or data or original or rst_n or sig1 or sig2 or signal)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module week1_vlg_check_tst (
+	choosed,
+	divided,
+	neg_edge,
+	reg1,
+	reg2,
+	reg3,
+	reg4,
+	sampler_rx
+);
+input  choosed;
+input  divided;
+input  neg_edge;
+input  reg1;
+input  reg2;
+input  reg3;
+input  reg4;
+input sampler_rx;
+
+reg  choosed_expected;
+reg  divided_expected;
+reg  neg_edge_expected;
+reg  reg1_expected;
+reg  reg2_expected;
+reg  reg3_expected;
+reg  reg4_expected;
+
+reg  choosed_prev;
+reg  divided_prev;
+reg  neg_edge_prev;
+reg  reg1_prev;
+reg  reg2_prev;
+reg  reg3_prev;
+reg  reg4_prev;
+
+reg  divided_expected_prev;
+
+reg  last_divided_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:7] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 7'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	choosed_prev = choosed;
+	divided_prev = divided;
+	neg_edge_prev = neg_edge;
+	reg1_prev = reg1;
+	reg2_prev = reg2;
+	reg3_prev = reg3;
+	reg4_prev = reg4;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	divided_expected_prev = divided_expected;
+end
+
+
+
+// expected divided
+initial
+begin
+	divided_expected = 1'bX;
+end 
+// generate trigger
+always @(choosed_expected or choosed or divided_expected or divided or neg_edge_expected or neg_edge or reg1_expected or reg1 or reg2_expected or reg2 or reg3_expected or reg3 or reg4_expected or reg4)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected choosed = %b | expected divided = %b | expected neg_edge = %b | expected reg1 = %b | expected reg2 = %b | expected reg3 = %b | expected reg4 = %b | ",choosed_expected_prev,divided_expected_prev,neg_edge_expected_prev,reg1_expected_prev,reg2_expected_prev,reg3_expected_prev,reg4_expected_prev);
+	$display("| real choosed = %b | real divided = %b | real neg_edge = %b | real reg1 = %b | real reg2 = %b | real reg3 = %b | real reg4 = %b | ",choosed_prev,divided_prev,neg_edge_prev,reg1_prev,reg2_prev,reg3_prev,reg4_prev);
+`endif
+	if (
+		( divided_expected_prev !== 1'bx ) && ( divided_prev !== divided_expected_prev )
+		&& ((divided_expected_prev !== last_divided_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port divided :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", divided_expected_prev);
+		$display ("     Real value = %b", divided_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_divided_exp = divided_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module week1_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg choose;
+reg clk;
+reg data;
+reg original;
+reg rst_n;
+reg sig1;
+reg sig2;
+reg signal;
+// wires                                               
+wire choosed;
+wire divided;
+wire neg_edge;
+wire reg1;
+wire reg2;
+wire reg3;
+wire reg4;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+week1 i1 (
+// port map - connection between master ports and signals/registers   
+	.choose(choose),
+	.choosed(choosed),
+	.clk(clk),
+	.data(data),
+	.divided(divided),
+	.neg_edge(neg_edge),
+	.original(original),
+	.reg1(reg1),
+	.reg2(reg2),
+	.reg3(reg3),
+	.reg4(reg4),
+	.rst_n(rst_n),
+	.sig1(sig1),
+	.sig2(sig2),
+	.signal(signal)
+);
+
+// original
+always
+begin
+	original = 1'b0;
+	original = #20000 1'b1;
+	#20000;
+end 
+
+week1_vlg_sample_tst tb_sample (
+	.choose(choose),
+	.clk(clk),
+	.data(data),
+	.original(original),
+	.rst_n(rst_n),
+	.sig1(sig1),
+	.sig2(sig2),
+	.signal(signal),
+	.sampler_tx(sampler)
+);
+
+week1_vlg_check_tst tb_out(
+	.choosed(choosed),
+	.divided(divided),
+	.neg_edge(neg_edge),
+	.reg1(reg1),
+	.reg2(reg2),
+	.reg3(reg3),
+	.reg4(reg4),
+	.sampler_rx(sampler)
+);
+endmodule
+

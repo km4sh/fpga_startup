@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, /home/kmash/altera/13.0sp1/helloworld/q3/shiftreg.bdf
+source_file = 1, /home/kmash/altera/13.0sp1/helloworld/q3/db/q3.cbx.xml
+design_name = shiftreg
+instance = comp, \clk~I\, clk, shiftreg, 1
+instance = comp, \clk~clkctrl\, clk~clkctrl, shiftreg, 1
+instance = comp, \inst4~0\, inst4~0, shiftreg, 1
+instance = comp, \inst1~feeder\, inst1~feeder, shiftreg, 1
+instance = comp, \inst2~feeder\, inst2~feeder, shiftreg, 1
+instance = comp, \inst3~feeder\, inst3~feeder, shiftreg, 1
+instance = comp, \output[3]~I\, output[3], shiftreg, 1
+instance = comp, \output[2]~I\, output[2], shiftreg, 1
+instance = comp, \output[1]~I\, output[1], shiftreg, 1
+instance = comp, \output[0]~I\, output[0], shiftreg, 1

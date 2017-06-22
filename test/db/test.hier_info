@@ -1,0 +1,8 @@
+|test
+clkin => step[0].CLK
+clkin => step[1].CLK
+clkin => step1[0].CLK
+clkin => step1[1].CLK
+clkout <= clkout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,105 @@
+|rtc
+led_rst <= digitleds:inst4.led_rst
+clk => basicclock:inst.clk
+clk => digitleds:inst4.clk
+segout <= digitleds:inst4.segout
+led_clk_x <= digitleds:inst4.led_clk_x
+digout[0] <= digitleds:inst4.digout[0]
+digout[1] <= digitleds:inst4.digout[1]
+digout[2] <= digitleds:inst4.digout[2]
+digout[3] <= digitleds:inst4.digout[3]
+
+
+|rtc|digitleds:inst4
+digit1[0] => Mux7.IN0
+digit1[1] => Mux6.IN0
+digit1[2] => Mux5.IN0
+digit1[3] => Mux4.IN0
+digit2[0] => Mux7.IN1
+digit2[1] => Mux6.IN1
+digit2[2] => Mux5.IN1
+digit2[3] => Mux4.IN1
+digit3[0] => Mux7.IN2
+digit3[1] => Mux6.IN2
+digit3[2] => Mux5.IN2
+digit3[3] => Mux4.IN2
+digit4[0] => Mux7.IN3
+digit4[1] => Mux6.IN3
+digit4[2] => Mux5.IN3
+digit4[3] => Mux4.IN3
+ptflag => always1.IN1
+clk => led_clk.CLK
+clk => tictoc[0].CLK
+clk => tictoc[1].CLK
+clk => tictoc[2].CLK
+clk => tictoc[3].CLK
+clk => tictoc[4].CLK
+clk => tictoc[5].CLK
+clk => tictoc[6].CLK
+clk => tictoc[7].CLK
+clk => tictoc[8].CLK
+clk => tictoc[9].CLK
+clk => tictoc[10].CLK
+clk => tictoc[11].CLK
+clk => tictoc[12].CLK
+clk => tictoc[13].CLK
+clk => tictoc[14].CLK
+clk => tictoc[15].CLK
+clk => tictoc[16].CLK
+led_rst <= <VCC>
+segout <= segout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digout[0] <= digout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digout[1] <= digout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digout[2] <= digout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digout[3] <= digout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led_clk_x <= led_clk_x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|rtc|basicclock:inst
+clk => ptflag~reg0.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+clk => cnt[20].CLK
+clk => cnt[21].CLK
+clk => cnt[22].CLK
+clk => cnt[23].CLK
+clk => cnt[24].CLK
+clk => cnt[25].CLK
+clk => cnt[26].CLK
+digit1[0] <= digit1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit1[1] <= digit1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit1[2] <= digit1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit1[3] <= digit1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit2[0] <= digit2[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit2[1] <= digit2[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit2[2] <= digit2[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit2[3] <= digit2[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit3[0] <= digit3[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit3[1] <= digit3[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit3[2] <= digit3[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit3[3] <= digit3[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit4[0] <= digit4[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit4[1] <= digit4[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit4[2] <= digit4[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit4[3] <= digit4[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ptflag <= ptflag~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

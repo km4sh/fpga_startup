@@ -1,0 +1,33 @@
+module basicclock(
+                  input            clk,
+                  output reg [3:0] digit1,
+                  output reg [3:0] digit2,
+                  output reg [3:0] digit3,
+                  output reg [3:0] digit4
+                  );
+   reg [26:0]                      cnts;
+   reg [5:0]                       seconds;
+   reg [5:0]                       minutes;
+   parameter onesecond = 27'd24999999;
+   always @(posedge clk)
+     begin
+        cnt <= cnt + 1;
+        if(cnt == onesecond)
+          begin
+             seconds <= seconds + 1;
+             digit3 <= seconds / 10;
+             digit4 <= seconds % 10;
+             if(seconds == 59)
+               begin
+                  seconds <= 0;
+                  minutes <= minutes + 1;
+                  digit1 <= minutes / 10;
+                  digit2 <= minutes % 10;
+                  if(minutes == 59)
+                    begin
+                       minutes <= 0;
+                    end
+               end // if (seconds == 59)
+          end // if (cnt == onesecond)
+     end // always @ (posedge clk)
+endmodule // basicclock

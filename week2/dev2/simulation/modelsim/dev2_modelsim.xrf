@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, /home/kmash/altera/13.0sp1/helloworld/week2/dev2/dev2.v
+source_file = 1, /home/kmash/altera/13.0sp1/helloworld/week2/dev2/db/dev2.cbx.xml
+design_name = dev2
+instance = comp, \ori~I\, ori, dev2, 1
+instance = comp, \dev~0\, dev~0, dev2, 1
+instance = comp, \dev~reg0\, dev~reg0, dev2, 1
+instance = comp, \dev~I\, dev, dev2, 1

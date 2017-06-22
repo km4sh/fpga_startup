@@ -1,0 +1,28 @@
+|digitleds
+clk => led_clk.CLK
+clk => tictoc[0].CLK
+clk => tictoc[1].CLK
+clk => tictoc[2].CLK
+clk => tictoc[3].CLK
+clk => tictoc[4].CLK
+clk => tictoc[5].CLK
+clk => tictoc[6].CLK
+clk => tictoc[7].CLK
+clk => tictoc[8].CLK
+clk => tictoc[9].CLK
+clk => tictoc[10].CLK
+clk => tictoc[11].CLK
+clk => tictoc[12].CLK
+clk => tictoc[13].CLK
+clk => tictoc[14].CLK
+clk => tictoc[15].CLK
+clk => tictoc[16].CLK
+led_rst <= <VCC>
+segout <= segout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digout[0] <= digout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digout[1] <= digout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digout[2] <= digout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digout[3] <= digout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led_clk_x <= led_clk_x.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,42 @@
+moudule freker(
+               input            clk,
+               input            signal,
+               output reg [3:0] digit1,
+               output reg [3:0] digit2,
+               output reg [3:0] digit3,
+               output reg [3:0] digit4
+               );
+
+reg [15:0] cnt2signal;
+reg [15:0] cnt2clk;
+reg flag;
+
+
+initial
+  begin
+     flag <= 0;
+     cnt2signal <= 32'b0;
+     cnt2clk <= 32'b0;
+  end
+
+   always @(posedge clk)
+     begin
+        cnt2clk <= cnt2clk + 1;
+        if(cnt2clk == 0)
+          begin
+             flag <= 1;
+             digit1 <= ((cnt2signal/16'bffff) * 50000) / 1000;
+             digit2 <= ((cnt2signal/16'bffff) * 50000) / 100;
+             digit3 <= ((cnt2signal/16'bffff) * 50000) / 10;
+             digit3 <= ((cnt2signal/16'bffff) * 50000) % 10;
+          end
+     end // always @ (posedge clk)
+
+   always @(posedge signal)
+     begin
+        cnt2signal <= cnt2signal +1;
+        if(flag <= 1)
+          begin
+             cnt2signal <= 0;
+          end
+     end

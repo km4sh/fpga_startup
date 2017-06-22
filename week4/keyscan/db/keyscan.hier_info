@@ -1,0 +1,67 @@
+|Block1
+keyr[0] <= keyscan:inst1.keyr[0]
+keyr[1] <= keyscan:inst1.keyr[1]
+keyr[2] <= keyscan:inst1.keyr[2]
+keyr[3] <= keyscan:inst1.keyr[3]
+clk50m => clk5ms:inst.clk50m
+keyc[0] => keyscan:inst1.keyc[0]
+keyc[1] => keyscan:inst1.keyc[1]
+keyc[2] => keyscan:inst1.keyc[2]
+led[0] <= keyscan:inst1.led[0]
+led[1] <= keyscan:inst1.led[1]
+led[2] <= keyscan:inst1.led[2]
+led[3] <= keyscan:inst1.led[3]
+
+
+|Block1|keyscan:inst1
+clk => keyrbuf[0].CLK
+clk => keyrbuf[1].CLK
+clk => keyrbuf[2].CLK
+clk => keyrbuf[3].CLK
+clk => keyr[0]~reg0.CLK
+clk => keyr[1]~reg0.CLK
+clk => keyr[2]~reg0.CLK
+clk => keyr[3]~reg0.CLK
+clk => led[0]~reg0.CLK
+clk => led[1]~reg0.CLK
+clk => led[2]~reg0.CLK
+clk => led[3]~reg0.CLK
+keyc[0] => led.OUTPUTSELECT
+keyc[0] => led.OUTPUTSELECT
+keyc[0] => led.OUTPUTSELECT
+keyc[0] => led.OUTPUTSELECT
+keyc[1] => led.OUTPUTSELECT
+keyc[1] => led.OUTPUTSELECT
+keyc[1] => led.OUTPUTSELECT
+keyc[1] => led.OUTPUTSELECT
+keyc[2] => led.OUTPUTSELECT
+keyc[2] => led.OUTPUTSELECT
+keyc[2] => led.OUTPUTSELECT
+keyc[2] => led.OUTPUTSELECT
+keyr[0] <= keyr[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyr[1] <= keyr[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyr[2] <= keyr[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyr[3] <= keyr[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= led[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= led[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= led[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= led[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|clk5ms:inst
+clk50m => clk5ms~reg0.CLK
+clk50m => cnt25[0].CLK
+clk50m => cnt25[1].CLK
+clk50m => cnt25[2].CLK
+clk50m => cnt25[3].CLK
+clk50m => cnt25[4].CLK
+clk50m => cnt25[5].CLK
+clk50m => cnt25[6].CLK
+clk50m => cnt25[7].CLK
+clk50m => cnt25[8].CLK
+clk50m => cnt25[9].CLK
+clk50m => cnt25[10].CLK
+clk50m => cnt25[11].CLK
+clk5ms <= clk5ms~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

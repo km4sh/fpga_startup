@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Apr 20 19:12:09 2017
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : holastop
+Top-level Entity Name : Block2
+Family : Cyclone II
+Total logic elements : 30
+    Total combinational functions : 28
+    Dedicated logic registers : 24
+Total registers : 24
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

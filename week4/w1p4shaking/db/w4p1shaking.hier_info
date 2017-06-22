@@ -1,0 +1,18 @@
+|Block1
+keyout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+clk50m => w4p1shaking:inst.clk50m
+key => inst1.DATAIN
+led1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|w4p1shaking:inst
+clk50m => clk1m~reg0.CLK
+clk50m => cnt25[0].CLK
+clk50m => cnt25[1].CLK
+clk50m => cnt25[2].CLK
+clk50m => cnt25[3].CLK
+clk50m => cnt25[4].CLK
+clk50m => cnt25[5].CLK
+clk1m <= clk1m~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

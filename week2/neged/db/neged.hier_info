@@ -1,0 +1,8 @@
+|neged
+clk => key_en~reg0.CLK
+clk => pre_key.CLK
+key_in => pre_key.DATAIN
+key_in => Equal0.IN1
+key_en <= key_en~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

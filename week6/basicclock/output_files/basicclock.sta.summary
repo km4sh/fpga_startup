@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'basicclock:inst|ptflag'
+Slack : -8.766
+TNS   : -147.629
+
+Type  : Slow Model Setup 'clk'
+Slack : -4.237
+TNS   : -133.293
+
+Type  : Slow Model Setup 'digitleds:inst4|led_clk'
+Slack : -3.176
+TNS   : -54.685
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.589
+TNS   : -5.170
+
+Type  : Slow Model Hold 'digitleds:inst4|led_clk'
+Slack : -1.079
+TNS   : -1.079
+
+Type  : Slow Model Hold 'basicclock:inst|ptflag'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.941
+TNS   : -68.721
+
+Type  : Slow Model Minimum Pulse Width 'basicclock:inst|ptflag'
+Slack : -0.742
+TNS   : -47.488
+
+Type  : Slow Model Minimum Pulse Width 'digitleds:inst4|led_clk'
+Slack : -0.742
+TNS   : -37.100
+
+Type  : Fast Model Setup 'basicclock:inst|ptflag'
+Slack : -2.364
+TNS   : -30.693
+
+Type  : Fast Model Setup 'clk'
+Slack : -0.924
+TNS   : -17.829
+
+Type  : Fast Model Setup 'digitleds:inst4|led_clk'
+Slack : -0.395
+TNS   : -3.184
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.364
+TNS   : -2.721
+
+Type  : Fast Model Hold 'digitleds:inst4|led_clk'
+Slack : -0.791
+TNS   : -0.791
+
+Type  : Fast Model Hold 'basicclock:inst|ptflag'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -46.380
+
+Type  : Fast Model Minimum Pulse Width 'basicclock:inst|ptflag'
+Slack : -0.500
+TNS   : -32.000
+
+Type  : Fast Model Minimum Pulse Width 'digitleds:inst4|led_clk'
+Slack : -0.500
+TNS   : -25.000
+
+------------------------------------------------------------

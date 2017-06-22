@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk'
+Slack : -2.503
+TNS   : -20.660
+
+Type  : Slow Model Setup 'neged:inst4|key_en'
+Slack : -0.205
+TNS   : -0.852
+
+Type  : Slow Model Setup 'shaketohell:inst2|en'
+Slack : -0.004
+TNS   : -0.004
+
+Type  : Slow Model Setup 'clk5ms:inst|clk5ms'
+Slack : 1.303
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.589
+TNS   : -2.589
+
+Type  : Slow Model Hold 'clk5ms:inst|clk5ms'
+Slack : -1.069
+TNS   : -1.069
+
+Type  : Slow Model Hold 'neged:inst4|key_en'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'shaketohell:inst2|en'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.941
+TNS   : -24.201
+
+Type  : Slow Model Minimum Pulse Width 'neged:inst4|key_en'
+Slack : -0.742
+TNS   : -8.904
+
+Type  : Slow Model Minimum Pulse Width 'shaketohell:inst2|en'
+Slack : -0.742
+TNS   : -2.968
+
+Type  : Slow Model Minimum Pulse Width 'clk5ms:inst|clk5ms'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Fast Model Setup 'clk'
+Slack : -0.204
+TNS   : -0.244
+
+Type  : Fast Model Setup 'neged:inst4|key_en'
+Slack : 0.551
+TNS   : 0.000
+
+Type  : Fast Model Setup 'shaketohell:inst2|en'
+Slack : 0.642
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk5ms:inst|clk5ms'
+Slack : 0.841
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.365
+TNS   : -1.496
+
+Type  : Fast Model Hold 'clk5ms:inst|clk5ms'
+Slack : -0.461
+TNS   : -0.461
+
+Type  : Fast Model Hold 'neged:inst4|key_en'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'shaketohell:inst2|en'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -16.380
+
+Type  : Fast Model Minimum Pulse Width 'neged:inst4|key_en'
+Slack : -0.500
+TNS   : -6.000
+
+Type  : Fast Model Minimum Pulse Width 'shaketohell:inst2|en'
+Slack : -0.500
+TNS   : -2.000
+
+Type  : Fast Model Minimum Pulse Width 'clk5ms:inst|clk5ms'
+Slack : -0.500
+TNS   : -1.000
+
+------------------------------------------------------------

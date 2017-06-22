@@ -1,0 +1,62 @@
+|Block2
+led[0] <= decode4:inst3.led[0]
+led[1] <= decode4:inst3.led[1]
+led[2] <= decode4:inst3.led[2]
+led[3] <= decode4:inst3.led[3]
+clk => neged:inst4.clk
+clk => clk5ms:inst.clk50m
+keyin => shaketohell:inst2.keyin
+
+
+|Block2|decode4:inst3
+clk => led[0]~reg0.CLK
+clk => led[1]~reg0.CLK
+clk => led[2]~reg0.CLK
+clk => led[3]~reg0.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+en => led[1]~reg0.ENA
+en => led[0]~reg0.ENA
+en => led[2]~reg0.ENA
+en => led[3]~reg0.ENA
+en => cnt[0].ENA
+en => cnt[1].ENA
+led[0] <= led[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= led[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= led[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= led[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|neged:inst4
+clk => key_en~reg0.CLK
+clk => pre_key.CLK
+key_in => pre_key.DATAIN
+key_in => Equal0.IN1
+key_en <= key_en~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|shaketohell:inst2
+clk => en.CLK
+keyin => always1.IN1
+keyin => keybuf.DATAIN
+keyin => keyout~reg0.DATAIN
+keyout <= keyout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|clk5ms:inst
+clk50m => clk5ms~reg0.CLK
+clk50m => cnt25[0].CLK
+clk50m => cnt25[1].CLK
+clk50m => cnt25[2].CLK
+clk50m => cnt25[3].CLK
+clk50m => cnt25[4].CLK
+clk50m => cnt25[5].CLK
+clk50m => cnt25[6].CLK
+clk50m => cnt25[7].CLK
+clk50m => cnt25[8].CLK
+clk50m => cnt25[9].CLK
+clk50m => cnt25[10].CLK
+clk50m => cnt25[11].CLK
+clk5ms <= clk5ms~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

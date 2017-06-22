@@ -1,0 +1,99 @@
+<session jtag_chain="USB-Blaster [1-1]" jtag_device="@1: EP2C8 (0x020B20DD)" sof_file="">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_2" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <mnemonics/>
+  <static_plugin_mnemonics/>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_2" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="2" mfg_id="110" node_id="0" version="6"/>
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2017/04/20 16:43:53  #0">
+      <clock name="w4p1shaking:inst|clk1m" polarity="posedge" tap_mode="probeonly"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="128" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="key" tap_mode="probeonly"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="key" tap_mode="probeonly"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="key" tap_mode="probeonly"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <unified_setup_data_view>
+          <node data_index="0" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="key" storage_index="0" tap_mode="probeonly" trigger_index="0" type="input pin"/>
+        </unified_setup_data_view>
+        <data_view>
+          <net data_index="0" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="key" storage_index="0" tap_mode="probeonly" trigger_index="0" type="input pin"/>
+        </data_view>
+        <setup_view>
+          <net data_index="0" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="key" storage_index="0" tap_mode="probeonly" trigger_index="0" type="input pin"/>
+        </setup_view>
+        <trigger_in_editor/>
+        <trigger_out_editor/>
+      </presentation>
+      <trigger CRC="75ED4A92" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2017/04/20 16:43:53  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="advanced">
+            <power_up enabled="yes">
+              <power_up_expression><![CDATA['detector_0':(mbpm('X',{'key'}))]]>
+              </power_up_expression>
+            </power_up>
+            <expression><![CDATA['detector_0':(mbpm('E',{'key'}))]]>
+            </expression>
+            <op_node>
+              <op_node expanded="1" left="539" top="103" type="Advanced Trigger Level Result">
+                <op_node expanded="1" first_port_empty="1" left="409" name="detector_0" pattern="E" top="63" type="Edge &amp; Level Detector">
+                  <op_node left="279" name="key" top="103" type="Node"/>
+                </op_node>
+              </op_node>
+            </op_node>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>1
+            <pwr_up_transitional>1</pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+        <log>
+          <data global_temp="1" name="log: 2017/04/20 16:43:53  #2"/>
+          <extradata/>
+        </log>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+    </position_info>
+  </instance>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="advanced trigger node widget height" value="86"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <single attribute="hierarchy widget height" value="166"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <single attribute="sof manager visible" value="0"/>
+    <multi attribute="frame size" size="2" value="1366,732"/>
+    <multi attribute="jtag widget size" size="2" value="402,141"/>
+  </global_info>
+</session>
